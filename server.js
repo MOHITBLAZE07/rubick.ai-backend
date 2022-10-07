@@ -9,6 +9,10 @@ app.use(cors({origin:"*"}))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+app.get('/',(req,res)=>{
+    res.send({welcome:"welcome"}); 
+})
+
 app.get('/products', async( req, res ) => {
     const limit = 5;
     const {page} = req.query;
