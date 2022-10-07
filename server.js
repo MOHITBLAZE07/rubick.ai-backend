@@ -51,5 +51,5 @@ app.post('/products',async(req,res)=>{
         res.send({message:"error",err})
     } 
 })
-
-app.listen(4000, ()=>{console.log("server listening to 4000 port!")})
+const port = process.env.PORT
+app.listen(port, ()=>{console.log(`server listening to ${port} port!`)})
